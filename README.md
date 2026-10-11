@@ -41,15 +41,19 @@ Project/
 
 ### 1. Reddit API credentials
 
-You need a Reddit API app (free):
+As of late 2025, Reddit closed self-service API app creation. New OAuth
+clients require approval under Reddit's Responsible Builder Policy before
+you can get a client ID/secret:
 
-1. Go to https://www.reddit.com/prefs/apps
-2. Click "create another app..."
-3. Choose type **script**
-4. Name it anything (e.g. `local-sentiment-tracker`), leave the "about url"
-   blank, and set the "redirect uri" to `http://localhost:8080`
-5. After creating, copy the **client ID** (string under the app name) and
-   **client secret**.
+1. Submit a Data Access Request via Reddit's support form, selecting
+   "I'm a developer" and describing the read-only, personal, non-commercial
+   use case (see this repo's description for exactly what the app does).
+2. Once approved, Reddit will direct you to create a **script**-type app
+   to obtain a **client ID** and **client secret**.
+
+This project does not interact with Reddit at all beyond reading public
+posts/comments via the official API — no posting, voting, commenting, or
+messaging.
 
 Copy `config/.env.example` to `config/.env` and fill in:
 
