@@ -1,0 +1,33 @@
+# Tickers to track. Keep this list intentional — the more tickers, the more
+# API calls and the more false-positive filtering you'll need to tune.
+tickers:
+  - GME
+  - AMC
+  - TSLA
+  - NVDA
+  - AAPL
+
+# Subreddits to pull from (without the "r/" prefix).
+subreddits:
+  - wallstreetbets
+  - stocks
+  - investing
+
+# How many posts to pull per subreddit per run.
+post_limit: 50
+
+# How many top-level comments to pull per post.
+comments_per_post: 20
+
+# Common English words that collide with ticker symbols. Mentions of these
+# are only counted if written as a cashtag (e.g. "$IT") rather than bare word.
+ambiguous_tickers:
+  - IT
+  - ON
+  - ALL
+  - FOR
+  - CAN
+  - NEW
+  - ARE
+  - SO
+  - A
