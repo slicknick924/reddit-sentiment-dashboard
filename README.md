@@ -52,7 +52,7 @@ you can get a client ID/secret:
    to obtain a **client ID** and **client secret**.
 
 This project does not interact with Reddit at all beyond reading public
-posts/comments via the official API — no posting, voting, commenting, or
+posts/comments via the official API. No posting, voting, commenting, or
 messaging.
 
 Copy `config/.env.example` to `config/.env` and fill in:
@@ -97,6 +97,6 @@ streamlit run dashboard/app.py
 ## Notes on data access
 
 Reddit restricted free API access in 2023. This project uses the official
-API via PRAW within standard rate limits — it is not a firehose/bulk scraper
+API via PRAW within standard rate limits. It is not a firehose/bulk scraper
 and will not retrieve the full volume of a tool like the old Pushshift. For a
 personal watchlist of a few subreddits and tickers, this is sufficient.
